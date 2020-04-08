@@ -1,9 +1,11 @@
-﻿using System;
-namespace Notes.Models
+﻿namespace Notes.Models
 {
+    using System;
+    using SQLite;
     public class Note
     {
-        public string FileName { get; set; }
+        [PrimaryKey, AutoIncrement]
+        public int ID { get; set; }
         public string Text { get; set; }
         public DateTime Date { get; set; }
     }
